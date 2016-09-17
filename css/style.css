@@ -1,0 +1,27 @@
+.center {
+    margin:auto;
+    text-align:center;
+  }
+button{
+  margin:auto;
+}
+table {
+  background:#AFB9C9;
+  /*background:#EBA0C8;  <--pink color */
+  font-size:xx-large;
+  border-collapse: collapse;
+}
+
+td:hover {
+  background: #f5f5f5;
+}
+
+td {
+  width: 100px;
+  height: 100px;
+}
+
+td {
+  border:5px solid black;
+  
+}
