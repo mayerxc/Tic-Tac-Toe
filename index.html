@@ -1,127 +1,98 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Tic Tac Toe with modal and reset - Done</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
 
-    
-    
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <!-- add styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">
 
-        <link rel="stylesheet" href="css/style.css">
+  <!-- add scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    
-    
-    
-  </head>
+</head>
 
-  <body>
-
-    <div id="myModal" class="modal fade" data-keyboard="false" data-backdrop="static">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title center">Tic Tac Toe Game</h1>
-      </div>
-      <div class="modal-body">
-        <form role="form">
-          <h3>Choose X or O:</h3>
-          <div class="radio">
-            <label><input type="radio" checked="checked" name="optradio" id="x">X</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="optradio">O</label>
-          </div>
-          <h3>Who takes the first turn?</h3>
-          <div class="radio">
-            <label><input type="radio" name="optradio2" checked="checked" id="me">Me!</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="optradio2">Computer</label>
-          </div>
-          <br><br>
-          <button type="button" class="btn btn-primary center-block" id="start" data-dismiss="modal">Start</button>
-        </form>
+<body>
+  <!-- modal -->
+  <div id="myModal" class="modal fade" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title center">Tic Tac Toe Game</h1>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <h3>Choose X or O:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" checked="checked" name="optradio" id="x">X</label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optradio">O</label>
+            </div>
+            <h3>Who takes the first turn?</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optradio2" checked="checked" id="me">Me!</label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optradio2">Computer</label>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary center-block" id="start" data-dismiss="modal">Start</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!--end of modal div -->
+  <!--end of modal div -->
 
-
-<div class="container">
-  <div class="jumbotron">
-    <div class="row">
-
-
-      <!-- <div class="col-md-4">
-
-        <form role="form">
-          <div class="well" id="well">
-            <h2>Choose X or O:</h2>
-            <div class="radio">
-              <label><input type="radio" checked="checked" name="optradio" id="x">X</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="optradio">O</label>
-            </div>
-
-
-            <h2>Who takes the first turn?</h2>
-            <div class="radio">
-              <label><input type="radio" name="optradio2" checked="checked" id="me">Me!</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="optradio2">Computer</label>
-            </div>
-            <button type="button" class="btn btn-primary center-block" id="start">Start</button>
-          </div>
-        </form>
-      </div><!-- end of col-md-4-->
-
-      <div class="col-md-12">
-        <h1 class="center">Tic Tac Toe Game</h1><br>
-        <table class="center">
-          <tr>
-            <td class="tic" id="A0"></td>
-            <td class="tic" id="A1"></td>
-            <td class="tic" id="A2"></td>
-          </tr>
-          <tr>
-            <td class="tic" id="A3"></td>
-            <td class="tic" id="A4"></td>
-            <td class="tic" id="A5"></td>
-          </tr>
-          <tr>
-            <td class="tic" id="A6"></td>
-            <td class="tic" id="A7"></td>
-            <td class="tic" id="A8"></td>
-          </tr>
-        </table>
-        <br><br> 
-        <button class='btn btn-primary center-block' id='reset'> Reset Board</button>
-        <br>
-        <button class='btn btn-primary center-block' id='restart'> Restart Game</button>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="center">Tic Tac Toe Game</h1>
+          <br>
+          <table class="center">
+            <tr>
+              <td class="tic" id="A0"></td>
+              <td class="tic" id="A1"></td>
+              <td class="tic" id="A2"></td>
+            </tr>
+            <tr>
+              <td class="tic" id="A3"></td>
+              <td class="tic" id="A4"></td>
+              <td class="tic" id="A5"></td>
+            </tr>
+            <tr>
+              <td class="tic" id="A6"></td>
+              <td class="tic" id="A7"></td>
+              <td class="tic" id="A8"></td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <button class='btn btn-primary center-block' id='reset'> Reset Board</button>
+          <br>
+          <button class='btn btn-primary center-block' id='restart'> Restart Game</button>
         </div>
 
 
+      </div>
     </div>
   </div>
-</div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 
-        <script src="js/index.js"></script>
+  <!-- add scripts -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+  <script src="js/index.js"></script>
 
-    
-    
-    
-  </body>
+</body>
+
 </html>
